@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qicong/tc/Query.hpp
+Time.hpp
+/home/qicong/tc/Time.hpp
+
+/home/qicong/tc/Time.hpp
+iostream
+-
+cstring
+-
+vector
+-
+cstdlib
+-
+map
+-
+
+/home/qicong/tc/baseline.cpp
+Query.hpp
+/home/qicong/tc/Query.hpp
+malloc.hpp
+/home/qicong/tc/malloc.hpp
+cmath
+-
+fstream
+-
+
+/home/qicong/tc/malloc.hpp
+iostream
+-
+string.h
+-
+
