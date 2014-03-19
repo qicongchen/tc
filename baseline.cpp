@@ -3,6 +3,7 @@
 #include <cmath>
 #include <fstream>
 
+Time MID_TIME;
 
 void sort_pair(vector<pair<string,Time> >& vec);//sort module
 vector<string> component_tokenize(string a, string seps);//tokenization module
@@ -12,8 +13,8 @@ map<long,int> umap,gmap;//mapping module
 vector<long> id2ukey,id2gkey;
 
 vector<Query> qList;
-
-
+vector<Query> qList_train;
+vector<Query> qList_test;
 
 int key2id(long key, map<long,int> &m,vector<long> &id2key)
 {
@@ -51,6 +52,7 @@ void  SortByTime()
 		components=component_tokenize(s,",");
 		Time t=time_tokenize(components[3]);
 		sort_pool.push_back(make_pair(s,t));
+
 	}
 	cout<<"reading "<<line<<" lines!"<<endl;
 	fin.close();
@@ -72,13 +74,11 @@ void ReadData()
 	while(getline(fin,s))
 	{
 		line++;
-
 		components=component_tokenize(s,",");
 		long ukey=atol(components[0].c_str());
 		long gkey=atol(components[1].c_str());
 		int action=atoi(components[2].c_str());
 		Time t=time_tokenize(components[3]);
-
 		//mapping
 		int uid=ukey2id(ukey);
 		int gid=gkey2id(gkey);
@@ -90,16 +90,69 @@ void ReadData()
 		int pos=qList[uid].eid2pos(gid);
 		//feature extraction
 		qList[uid].features[pos].second.dim[action]++;
+		qList[uid].features[pos].second.label = (action==1)?1:0;
+
+		//divided by time
+		// if(line>91440)
+		// {
+		// 	if(qList_test.size()<id2ukey.size())
+		// 	{
+		// 		Query q;
+		// 		qList_test.push_back(q);
+		// 	}
+		// 	int pos=qList_test[uid].eid2pos(gid);
+		// 	qList_test[uid].features[pos].second.dim[action]++;
+
+		// }
+		// else
+		// {
+		// 	if(qList_train.size()<id2ukey.size())
+		// 	{
+		// 		Query q;
+		// 		qList_train.push_back(q);
+		// 	}
+		// 	int pos=qList_train[uid].eid2pos(gid);
+		// 	qList_train[uid].features[pos].second.dim[action]++;
+
+		// }
 
 	}
+
 	cout<<"reading "<<line<<" lines!"<<endl;
 	cout<<"user num : "<<id2ukey.size()<<endl;
 	cout<<"goods num : "<<id2gkey.size()<<endl;
 	fin.close();
+	ofstream f1("train.txt");
+	ofstream f2("test.txt");
+	cout<<"qlist size:"<<qList.size()<<"  half:"<<qList.size()/2<<endl;
+
+	for (int i = 0;i<id2ukey.size();i++)
+	{
+		Query q = qList[i];
+		int size = qList[i].features.size();
+		int half = (size%2==1)?(size+1)/2:size/2;
+		pair<int,Feature> p;
+		for(int j=0;j<half;j++)
+		{
+			p=q.features[j];
+			f1<<p.first<<" "<<p.second;
+		}
+		for(int k=half;k<size;k++)
+		{
+			p=q.features[k];
+			f2<<p.first<<" "<<p.second;
+		}
+
+	}
+
+	f1.close();
+	f2.close();
 }
+
 int main(int argc,char** argv)
 {
-	//SortByTime();
+
+	// SortByTime();
 	ReadData();
 	return 0;
 }

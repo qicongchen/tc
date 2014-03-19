@@ -1,3 +1,5 @@
+#ifndef TIME_HPP
+
 #include <iostream>
 #include <cstring>
 #include <vector>
@@ -30,3 +32,4 @@ public:
 };
 
 
+#endif

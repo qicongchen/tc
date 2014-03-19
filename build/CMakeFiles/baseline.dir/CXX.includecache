@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/qicong/tc/Query.hpp
+/home/starry/Work/tc/Query.hpp
 Time.hpp
-/home/qicong/tc/Time.hpp
+/home/starry/Work/tc/Time.hpp
 
-/home/qicong/tc/Time.hpp
+/home/starry/Work/tc/Time.hpp
 iostream
 -
 cstring
@@ -22,17 +22,17 @@ cstdlib
 map
 -
 
-/home/qicong/tc/baseline.cpp
+/home/starry/Work/tc/baseline.cpp
 Query.hpp
-/home/qicong/tc/Query.hpp
+/home/starry/Work/tc/Query.hpp
 malloc.hpp
-/home/qicong/tc/malloc.hpp
+/home/starry/Work/tc/malloc.hpp
 cmath
 -
 fstream
 -
 
-/home/qicong/tc/malloc.hpp
+/home/starry/Work/tc/malloc.hpp
 iostream
 -
 string.h
