@@ -40,16 +40,16 @@ public:
             return pos;
         }
 
-         friend std::ostream & operator<< (std::ostream & output, const Query &q)
-        {
-            pair<int,Feature> p;
-            for(int i=0;i<q.features.size();i++)
-            {
-                p=q.features[i];
-                output<<p.first<<" "<<p.second;
-            }
+        //  friend std::ostream & operator<< (std::ostream & output, const Query &q)
+        // {
+        //     pair<int,Feature> p;
+        //     for(int i=0;i<q.features.size();i++)
+        //     {
+        //         p=q.features[i];
+        //         output<<p.first<<" "<<p.second;
+        //     }
 
-            return output;
-        }
+        //     return output;
+        // }
 
 };
