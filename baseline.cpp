@@ -65,7 +65,7 @@ void  SortByTime()
 	fout.close();
 }
 
-void ReadData()
+void ReadData(int ratio)
 {
 	string s;
 	ifstream fin("data.txt");
@@ -130,14 +130,14 @@ void ReadData()
 	{
 		Query q = qList[i];
 		int size = qList[i].features.size();
-		int half = (size%2==1)?(size+1)/2:size/2;
+		int ratio_size = (size%ratio==0)?size/ratio:(size-size%ratio)/ratio;
 		pair<int,Feature> p;
-		for(int j=0;j<half;j++)
+		for(int j=0;j<ratio_size;j++)
 		{
 			p=q.features[j];
 			f1<<p.first<<" "<<p.second;
 		}
-		for(int k=half;k<size;k++)
+		for(int k=ratio_size;k<size;k++)
 		{
 			p=q.features[k];
 			f2<<p.first<<" "<<p.second;
@@ -153,6 +153,6 @@ int main(int argc,char** argv)
 {
 
 	// SortByTime();
-	ReadData();
+	ReadData(4);
 	return 0;
 }
