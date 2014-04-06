@@ -38,15 +38,3 @@ iostream
 string.h
 -
 
-/home/starry/Work/tc/sort.cpp
-Time.hpp
-/home/starry/Work/tc/Time.hpp
-utility
--
-algorithm
--
-
-/home/starry/Work/tc/tokenize.cpp
-Time.hpp
-/home/starry/Work/tc/Time.hpp
-
