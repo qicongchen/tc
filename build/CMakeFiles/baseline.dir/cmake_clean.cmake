@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/baseline.dir/tokenize.o"
-  "CMakeFiles/baseline.dir/baseline.o"
   "CMakeFiles/baseline.dir/sort.o"
+  "CMakeFiles/baseline.dir/baseline.o"
   "baseline.pdb"
   "baseline"
 )

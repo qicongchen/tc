@@ -1,0 +1,151 @@
+==train:test 2:9==
+get top n (3):
+average precision: 0.210645526614
+average recall: 0.394110985277
+average f1 score: 0.262476406191
+
+get top n (5):
+average precision: 0.194148735372
+average recall: 0.433748584371
+average f1 score: 0.250417048662
+
+get top n (10):
+average precision: 0.181861529059
+average recall: 0.464326160815
+average f1 score: 0.239641983343
+
+get top n (all):
+average precision: 0.176212561253
+average recall: 0.464326160815
+average f1 score: 0.232493524147
+
+==train:test 1:5==
+get top n (3):
+average precision: 0.127595318988
+average recall: 0.298980747452
+average f1 score: 0.172933182333
+
+get top n (5):
+average precision: 0.112589656474
+average recall: 0.37825594564
+average f1 score: 0.165612360459
+
+get top n (10):
+average precision: 0.0825450754103
+average recall: 0.448471121178
+average f1 score: 0.130922245801
+
+get top n (all):
+average precision: 0.0315933060468
+average recall: 0.465458663647
+average f1 score: 0.0512045784904
+
+==train:test 2:5==
+get top n (3):
+average precision: 0.213854284636
+average recall: 0.381653454134
+average f1 score: 0.261306153265
+
+get top n (5):
+average precision: 0.20469988675
+average recall: 0.416761041903
+average f1 score: 0.256376170702
+
+get top n (10):
+average precision: 0.193979758759
+average recall: 0.431483578709
+average f1 score: 0.246946409759
+
+get top n (all):
+average precision: 0.191296951082
+average recall: 0.431483578709
+average f1 score: 0.24377766671
+
+
+==train:test 3:11==
+get top n (3):
+average precision: 0.129105322763
+average recall: 0.300113250283
+average f1 score: 0.174405436014
+
+get top n (5):
+average precision: 0.113948659872
+average recall: 0.37825594564
+average f1 score: 0.166839238527
+
+get top n (10):
+average precision: 0.0815837962214
+average recall: 0.448471121178
+average f1 score: 0.129404438891
+
+get top n (all):
+average precision: 0.0315824282657
+average recall: 0.460928652322
+average f1 score: 0.0512056745471
+
+
+====train:test 2:9==6 features==
+get top n (3):
+average precision: 0.183465458664
+average recall: 0.394110985277
+average f1 score: 0.240921102303
+
+get top n (5):
+average precision: 0.145281238203
+average recall: 0.440543601359
+average f1 score: 0.206944219742
+
+get top n (10):
+average precision: 0.0906186521419
+average recall: 0.462061155153
+average f1 score: 0.142080755091
+
+get top n (all):
+average precision: 0.0316715587521
+average recall: 0.464326160815
+average f1 score: 0.0517618344116
+
+
+==2:9 10 features==
+get top n (3):
+average precision: 0.182332955832
+average recall: 0.394110985277
+average f1 score: 0.239977349943
+
+get top n (5):
+average precision: 0.143846734617
+average recall: 0.436013590034
+average f1 score: 0.204710672491
+
+get top n (10):
+average precision: 0.091335903935
+average recall: 0.463193657984
+average f1 score: 0.142707723442
+
+get top n (all):
+average precision: 0.0318499145835
+average recall: 0.464326160815
+average f1 score: 0.051587641931
+
+
+==2:5 10 features==
+get top n (3):
+average precision: 0.174782936957
+average recall: 0.380520951302
+average f1 score: 0.230577576444
+
+get top n (5):
+average precision: 0.137051717629
+average recall: 0.417893544734
+average f1 score: 0.195691096371
+
+get top n (10):
+average precision: 0.084672113466
+average recall: 0.431483578709
+average f1 score: 0.132467614547
+
+get top n (all):
+average precision: 0.0324666641908
+average recall: 0.431483578709
+average f1 score: 0.0525807780204
+
